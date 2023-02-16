@@ -14,11 +14,12 @@ int main(void)
 
 char c = 'a';
 
-while (c > 96 && c <= 127)
+while (c > 96 && c <= 122)
 {
 	putchar(c);
 	c++;
 }
+	putchar('\n');
 
 return (0);
 }
