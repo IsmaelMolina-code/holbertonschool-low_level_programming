@@ -17,15 +17,16 @@ char c1 = 'a';
 
 while (c1 > 96 && c1 <= 122)
 {
-        putchar(c1);
-        c1++;
+putchar(c1);
+c1++;
 }
 while (c > 63 && c <= 90)
 {
-        putchar(c);
-        c++;
+putchar(c);
+c++;
 }
-	putchar('\n');
+
+putchar('\n');
 
 return (0);
 }
