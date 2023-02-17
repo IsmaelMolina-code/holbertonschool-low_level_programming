@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /* more headers goes there */
 
 /**
@@ -9,6 +9,6 @@
 
 int main(void)
 {
-	_putchar('');
+	_putchar('c');
 	return (0);
 }
