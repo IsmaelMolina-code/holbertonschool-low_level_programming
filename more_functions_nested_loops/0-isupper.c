@@ -17,9 +17,8 @@ c = 65;
 	{
 		_putchar(c);
 		c++;
-		return (1);
 	}
-		return (0);
+		return (1);
 		_putchar('\n');
 
 }
