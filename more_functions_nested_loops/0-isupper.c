@@ -11,14 +11,12 @@
 int _isupper(int c)
 {
 
-c = 65;
-
-	while (c > 65 && c <= 90)
+	while (c > 'A' && c <= 'Z')
 	{
 		_putchar(c);
 		c++;
+		 return (1);
 	}
-		return (1);
 		_putchar('\n');
-
+		 return (0);
 }
