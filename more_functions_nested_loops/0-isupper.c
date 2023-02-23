@@ -3,19 +3,23 @@
 /**
  * _isupper - Entry point
  *
+ * @c: The character to print
+ *
  * Return: Always 0 (Success)
  */
 
 int _isupper(int c)
 {
 
-char c = 'A';
+c = 65;
 
-while (c > 65 && c <= 90)
-{
-	_putchar(c);
-	c++;
-}
-	_putchar('\n');
+	while (c > 65 && c <= 90)
+	{
+		_putchar(c);
+		c++;
+		return (1);
+	}
+		return (0);
+		_putchar('\n');
 
 }
