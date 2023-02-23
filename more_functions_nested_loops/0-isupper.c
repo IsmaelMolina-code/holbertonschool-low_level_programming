@@ -11,10 +11,8 @@
 int _isupper(int c)
 {
 
-	while (c > 'A' && c <= 'Z')
+	while (c >= 'A' && c <= 'Z')
 	{
-		_putchar(c);
-		c++;
 		 return (1);
 	}
 		_putchar('\n');
