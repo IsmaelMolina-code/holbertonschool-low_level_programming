@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void swap_int - function to swap numbers value.
+ * swap_int - function to swap numbers value.
  *
  * @a: return an int
  *
@@ -11,9 +11,9 @@
 void swap_int(int *a, int *b)
 {
 	int num;
+
 	num = *a;
 	*a = *b;
 	*b = num;
-
 }
 
