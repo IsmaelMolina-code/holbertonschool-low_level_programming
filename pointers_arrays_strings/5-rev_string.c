@@ -6,22 +6,25 @@
  * rev_string - function to swap numbers value.
  *
  * @s: the puts
- * 
+ *
  */
 
 void rev_string(char *s)
 {
-	int leng, g;
+	int leng, g, tmp;
+
+	leng = 0;
 
 	leng = strlen(s);
-	
-	while (*s != '\0')
+
+	while (s[leng] != '\0')
 	{
-		s++;
+		leng++;
 	}
-	for (g = leng - 1; g >= 0; g--)
+	for (g = 0; g < leng / 2; g++)
 	{
-		s[g] = leng - 1;
-		s[g - leng -1] = *s;
+		tmp = s[g];
+		s[g] = s[leng - g - 1];
+		s[leng - g - 1] = tmp;
 	}
 }
