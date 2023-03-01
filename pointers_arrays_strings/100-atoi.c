@@ -19,7 +19,7 @@ int _atoi(char *s)
 
 	while (isspace(*p))
 	{
-		++p;
+		p++;
 	}
 
 	if (*p == '-' || *p == '+')
