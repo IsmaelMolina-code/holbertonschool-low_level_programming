@@ -5,6 +5,9 @@
 /**
  * print_array - function to swap numbers value.
  *
+ * @a: an int
+ *
+ * @n: another int
  */
 
 void print_array(int *a, int n)
