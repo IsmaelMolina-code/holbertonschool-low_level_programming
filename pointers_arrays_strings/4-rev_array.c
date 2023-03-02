@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - function to reverse the content of an array of integers.
+ * reverse_array - function to reverse the content of an array of integers.
  *
  * @a: an int
  *
@@ -20,6 +20,7 @@ void reverse_array(int *a, int n)
 		if (a[i] != a[j])
 		{
 			int num = a[i];
+
 			a[i] = a[j];
 			a[j] = num;
 		}
