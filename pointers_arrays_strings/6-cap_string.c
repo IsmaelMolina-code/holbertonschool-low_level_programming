@@ -5,6 +5,7 @@
  *
  * @str: the string
  *
+ * Return: cap_string function
  */
 
 char *cap_string(char *str)
