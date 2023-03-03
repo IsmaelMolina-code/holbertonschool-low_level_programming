@@ -26,6 +26,9 @@ char *cap_string(char *str)
 			str[i] == '}')
 		{
 			nt = 1;
+		} else
+		{
+			nt = 0;
 		}
 	}
 
