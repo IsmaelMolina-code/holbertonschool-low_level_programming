@@ -3,6 +3,8 @@
 /**
  * _puts_recursion - function to print a string with recursion.
  *
+ * @s: the char
+ *
  * Return: puts recursion function
  */
 
