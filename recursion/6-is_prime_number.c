@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * is_prime_number - function to return the factorial of a given number.
+ * is_prime_rsv - function that checks if it is a prime number.
+ *
+ * is_prime_number - function to return true if it is a prime number.
  *
  * @n: the number
  *
@@ -30,6 +32,13 @@ int is_prime_rsv(int n, int i)
 
 	return (is_prime_rsv(n, i + 1));
 }
+/**
+ * is_prime_number - function to return true if it is a prime number.
+ *
+ * @n: the number
+ *
+ * Return: returning factorial function
+ */
 
 int is_prime_number(int n)
 {
