@@ -1,9 +1,11 @@
 #include "main.h"
 
-/** 
+/**
  * create_array - Creating a pointer to an array with dynamic memory.
  *
- * @ar: the array
+ * @size: size of ar
+ *
+ * @c: the char to be printed
  *
  * Return: a pointer to the array
  *
@@ -15,7 +17,7 @@ char *create_array(unsigned int size, char c)
 
 	unsigned int i = 0;
 
-	ar = malloc (size * sizeof(char));
+	ar = malloc(size * sizeof(char));
 
 	if (size == 0 || ar == NULL)
 	{
