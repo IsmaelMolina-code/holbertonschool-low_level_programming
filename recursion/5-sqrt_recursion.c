@@ -1,21 +1,34 @@
 #include "main.h"
 
 /**
- * factorial - function to return the factorial of a given number.
+ * comp - function
  *
- * @n: the number
+ * @n: int
  *
- * Return: returning factorial function
+ * @i: int
+ *
+ * Return: 0
  */
 
-int factorial(int n)
+int comp(int n, int i)
 {
-	if (n < 0)
-	{
+	if (i * i == n)
+		return (i);
+	else if (i * i > n)
 		return (-1);
-	} else if (n == 0)
-	{
-		return (1);
-	} else
-		return (n * factorial(n - 1));
+
+	return (comp(n, i + 1));
+}
+
+/**
+ * _sqrt_recursion - function
+ *
+ * @n: int
+ *
+ * Return: 0
+ */
+
+int _sqrt_recursion(int n)
+{
+	return (comp(n, 1));
 }
