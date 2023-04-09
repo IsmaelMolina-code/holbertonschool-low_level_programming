@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - prints all the elements of a dlistint_t list
+ * add_dnodeint - adding a new node to a dlistint_t list
  *
  * @head: pointer to pointer of the head of the list
  *
- * @str: the str to duplicate
+ * @n: the new node
  *
  * Return: the addition of new node
  */
@@ -18,6 +18,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (NULL);
 
 	n_node->n = n;
+	n_node->prev = NULL;
 	n_node->next = *head;
 
 	*head = n_node;
