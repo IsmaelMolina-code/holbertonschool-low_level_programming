@@ -22,11 +22,14 @@ int main(int ac, char **av)
 	if (fd1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
+	if (nread == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+
 	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 
 	if (fd2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		close(fd1);
 		exit(99);
 	}
@@ -38,11 +41,6 @@ int main(int ac, char **av)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
-	}
-
-	if (nread == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
 
 	if (close(fd1) == -1)
