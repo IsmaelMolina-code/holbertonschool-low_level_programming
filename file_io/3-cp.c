@@ -20,10 +20,7 @@ int main(int ac, char **av)
 	fd1 = open(av[1], O_RDONLY);
 
 	if (fd1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
 	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 
@@ -37,12 +34,15 @@ int main(int ac, char **av)
 	while ((nread = read(fd1, buffer, 1024)))
 	{
 		nwrite = write(fd2, buffer, nread);
-
 		if (nwrite == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
+	}
+
+	if (nread == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
 
 	if (close(fd1) == -1)
