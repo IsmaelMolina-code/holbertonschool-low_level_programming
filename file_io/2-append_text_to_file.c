@@ -23,8 +23,9 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content != NULL)
-	{											while (text_content[text_len] != '\0')
-		text_len++;
+	{
+		while (text_content[text_len] != '\0')
+			text_len++;
 	}
 
 	fdwrite = write(fdopen, text_content, text_len);
