@@ -25,7 +25,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(keymatch->key, key) == 0)
 		{
-			free(keymatch->value);										keymatch->value = strdup(value);
+			free(keymatch->value);
+			keymatch->value = strdup(value);
 			return (1);
 		}
 
@@ -37,7 +38,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	newpair->key = strdup(key);
 	newpair->value = strdup(value);
-	newpair->next = ht->array[index];
+	newpair->next = NULL;
+
+	if (ht->array[index] != NULL)
+		newpair->next = ht->array[index];
+
 	ht->array[index] = newpair;
 
 	return (1);
