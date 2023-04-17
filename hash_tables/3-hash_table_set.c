@@ -16,6 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *keymatch = ht->array[index];
+	hash_node_t *newpair = malloc(sizeof(hash_node_t));
 
 	if (!ht || !key || !value || !*key)
 		return (0);
@@ -30,8 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		keymatch = keymatch->next;
 	}
-
-	hash_node_t *newpair = malloc(sizeof(hash_node_t));
 
 	if (!newpair)
 		return (0);
