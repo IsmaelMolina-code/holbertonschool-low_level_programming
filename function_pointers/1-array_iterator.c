@@ -9,17 +9,16 @@
  *
  * @size: function to use
  *
- * @action: actoin
+ * @action: pointer to the function
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	unsigned int cont = 0;
+	size_t i;
 
-	if (!array && size > 0 && !action)
+	if (array && action)
 	{
-		for (; cont < size; cont++)
-			action(array[cont]);
+		for (i = 0; i < size; i++)
+			action(array[i]);
 	}
-
 }
