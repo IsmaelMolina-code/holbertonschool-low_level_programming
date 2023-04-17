@@ -21,11 +21,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht || !key || !value || !*key)
 		return (0);
 
-	while (keymatch)
+	while (!keymatch)
 	{
 		if (strcmp(keymatch->key, key) == 0)
 		{
-			free(keymatch->value);
 			keymatch->value = strdup(value);
 			return (1);
 		}
