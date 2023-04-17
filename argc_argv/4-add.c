@@ -9,12 +9,12 @@
  *
  * @argv: dir to a table
  *
- * Return: 0 (Succes)
+ * Return: 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i = 1, j = 0;
 	int sum = 0;
 
 	if (argc < 2)
