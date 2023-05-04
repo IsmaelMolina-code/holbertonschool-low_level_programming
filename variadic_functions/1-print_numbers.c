@@ -5,7 +5,7 @@
  *
  * @separator: pointer to be printed between n
  *
- * @n: n(quantity) to be printed 
+ * @n: n(quantity) to be printed
  *
  * Return: .
  */
