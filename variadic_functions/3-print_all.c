@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == date[j].letters[0])
 			{
-				printf("%s\t", separator), separator = ", ";
+				printf("%s\it", separator) = ", ";
 				(date[j].f)(list);
 			}
 			j++;
