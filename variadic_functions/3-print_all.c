@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	list_f date[] = {
+	list_a date[] = {
 	{"c", print_c},
 	{"i", print_i},
 	{"f", print_f},
@@ -27,9 +27,9 @@ void print_all(const char * const format, ...)
 	while (format && format[i] != '\0')
 	{
 		j = 0;
-		while (date[j].letter)
+		while (date[j].letters)
 		{
-			if (format[i] == date[j].letter[0])
+			if (format[i] == date[j].letters[0])
 			{
 				printf("%s\t", separator), separator = ", ";
 				(date[j].f)(list);
