@@ -21,6 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht || !key || !value || !*key)
 		return (0);
 
+	if (keymatch != NULL)
+	{
 	while (keymatch != NULL)
 	{
 		if (strcmp(keymatch->key, key) == 0)
@@ -30,6 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 
 		keymatch = keymatch->next;
+	}
 	}
 	newpair = malloc(sizeof(hash_node_t));
 
