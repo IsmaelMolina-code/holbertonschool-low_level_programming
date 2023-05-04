@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *keymatch = ht->array[index];
 	hash_node_t *newpair;
 
-	if (!newpair || !ht || !key || !value || !*key)
+	if (!ht || !key || !value || !*key)
 		return (0);
 
 	while (keymatch)
