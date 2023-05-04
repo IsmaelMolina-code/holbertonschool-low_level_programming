@@ -2,9 +2,9 @@
 
 /**
  * print_binary - function to print the binary representation of a number
- * 
+ *
  * @n: number to be printed
- * 
+ *
  * Return: binary number
  */
 
