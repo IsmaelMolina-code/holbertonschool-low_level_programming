@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *keymatch = ht->array[index];
 	hash_node_t *newpair = malloc(sizeof(hash_node_t));
 
-	if (!ht || !key || !value || !*key)
+	if (!newpair || !ht || !key || !value || !*key)
 		return (0);
 
 	while (keymatch)
@@ -39,6 +39,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	newpair->value = strdup(value);
 	newpair->next = NULL;
 
+	if (!newpair->key || !newpair->value)
+	{
+		free(newpair->key);
+		free(newpair->value);
+		free(newpair);
+		return (0);
+	}
 	if (ht->array[index] != NULL)
 		newpair->next = ht->array[index];
 
