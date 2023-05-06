@@ -24,13 +24,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (two_str == NULL)
 		return (NULL);
-	else
-	{
-		for (len1 = 0; s1[len1]; len1++)
-			two_str[len1] = s1[len1];
-		for (len2 = 0; s2[len2]; len2++, len1++)
-			two_str[len1] = s2[len2];
-	}
+
+	for (len1 = 0; s1[len1]; len1++)
+		two_str[len1] = s1[len1];
+	for (len2 = 0; s2[len2]; len2++, len1++)
+		two_str[len1] = s2[len2];
 
 	return (two_str);
 }
