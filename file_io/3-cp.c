@@ -31,7 +31,7 @@ int main(int ac, char **av)
 		exit(99);
 	}
 
-	while ((nread = read(fd1, buffer, 1024)))
+	while ((nread = read(fd1, buffer, 1024)) >= 1)
 	{
 		nwrite = write(fd2, buffer, nread);
 		if (nwrite == -1)
@@ -40,7 +40,7 @@ int main(int ac, char **av)
 		}
 	}
 
-	if (fd1 == -1)
+	if (nread == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
 	if (close(fd1) == -1)
