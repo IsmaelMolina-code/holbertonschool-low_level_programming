@@ -2,11 +2,11 @@
 
 /**
 * main - function to run
-* 
+*
 * @argc: argc
-* 
+*
 * @argv: argv
-* 
+*
 * Return: an integer
 */
 
